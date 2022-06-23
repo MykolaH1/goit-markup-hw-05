@@ -12,6 +12,7 @@
 сірий колір для нижньої рамки хедера #ECECEC
 сірий колір у карточці rgba(175, 177, 184, 1)
 футер колір кнопки беграунд rgba(255, 255, 255, 0.1);
+фон під шрифт на картинці rgba(47, 48, 58, 0.8);
 
 шрифти: Roboto, Raleway
 Roboto: 900,700,500,400
@@ -30,6 +31,7 @@ Releway: 700
    --border-header: #ECECEC;
    --icon-color: rgba(175, 177, 184, 1);
    --footer-bg: rgba(255, 255, 255, 0.1);
+   --bg-work: rgba(47, 48, 58, 0.8);
 }
 body{
    margin: 0;
@@ -54,6 +56,11 @@ body{
    padding: 0;
    margin: 0;
    list-style: none;
+}
+img{
+   display: block;
+   max-width: 100%;
+   height: auto;
 }
 /*загальні властивості кнопки*/
 .button {
@@ -268,11 +275,32 @@ body{
 /*work*/
 .work-list{
    display: flex;
-   
 }
 .work-list .item:not(:last-child) {
    margin-right: 30px;
 }
+
+.work-item{
+   position:relative;
+}
+.work-text{
+   width: 100%;
+   margin-top: 0;
+   margin-bottom: 0;
+   padding-top: 27px;
+   padding-bottom: 27px;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+
+   text-align: center;
+   text-transform: uppercase;
+   background-color: var(--bg-work);
+   color: var(--background-color);
+}
+
+
+
 /*team*/
 .team{
    background-color: var(--secondary-background-color);
