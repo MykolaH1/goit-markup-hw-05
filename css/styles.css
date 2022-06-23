@@ -12,6 +12,7 @@
 сірий колір для нижньої рамки хедера #ECECEC
 сірий колір у карточці rgba(175, 177, 184, 1)
 футер колір кнопки беграунд rgba(255, 255, 255, 0.1);
+
 шрифти: Roboto, Raleway
 Roboto: 900,700,500,400
 Releway: 700
@@ -119,6 +120,9 @@ body{
    line-height: 1.14;
    letter-spacing: 0.02em;
    text-decoration: none;
+
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .link:hover,
 .site-nav .link:focus{
@@ -145,6 +149,9 @@ body{
    margin-right: 10px;
    
    fill: var(--primary-text-color);
+
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .auth-nav-phone{
    width: 10px;
@@ -331,6 +338,9 @@ body{
 
    border-radius: 50%;
    fill: var(--icon-color);
+
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-link:hover,
 .team-link:focus{
@@ -361,6 +371,9 @@ body{
    border: 1px solid #AFB1B8;
    border-radius: 4px;
    fill: var(--icon-color);
+
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-link:hover,
 .client-link:focus{
@@ -395,6 +408,9 @@ body{
    line-height: 1.71;
    font-style: normal;
    text-decoration: none;
+
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-nav .navigation:not(:last-child) {
    margin-bottom: 9px;
@@ -450,6 +466,9 @@ body{
    border-radius: 50%;
    background-color: var(--footer-bg);
    fill: var(--background-color);
+
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-link:hover,
 .footer-link:focus{
@@ -475,6 +494,8 @@ body{
    line-height: 1.62;
    letter-spacing: 0.03em;
    
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-list{
    margin-top: 0;
