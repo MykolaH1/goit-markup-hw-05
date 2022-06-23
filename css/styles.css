@@ -110,6 +110,23 @@ img{
    margin-right: 50px;
    
 }
+.site-nav.item{
+   position: absolute;
+}
+.active::after{
+   position: relative;
+   left: 0;
+   bottom: -34px;
+   display: block;
+   height: 4px;
+   border-radius: 2px;
+   content: ' ';
+
+   background-color: var(--accent-color);
+   
+   
+}
+
 .auth-nav{
    display: inline-flex;
    margin-left: auto;
@@ -135,20 +152,21 @@ img{
 .site-nav .link:focus{
    color: var(--accent-color);
 }
-
+.site-nav .active{
+   color: var(--accent-color);
+}
 /*auth nav*/
 .auth-nav .link {
    display: flex;
    color: var(--primary-text-color);
+   
 }
 
 .auth-nav .link:hover,
 .auth-nav .link:focus {
    color: var(--accent-color);
 }
-.site-nav .active{
-   color: var(--accent-color);
-}
+
 .auth-nav-icon,
 .auth-nav-phone{
    width: 16px;
