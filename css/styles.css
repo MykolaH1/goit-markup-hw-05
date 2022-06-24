@@ -44,7 +44,7 @@ body{
    line-height: 1.14;
    letter-spacing: 0.03em;
 }
-/*утиліти*/
+/*-утиліти-*/
 .container{
    width: 1200px;
    margin-left: auto;
@@ -62,7 +62,7 @@ img{
    max-width: 100%;
    height: auto;
 }
-/*загальні властивості кнопки*/
+/*-загальні властивості кнопки-*/
 .button {
    border-radius: 4px;
    border: 1px solid transparent;
@@ -74,7 +74,7 @@ img{
 }
 
 
-/*хедер*/
+/*-section header-*/
 .section-header{
    display: flex;
    align-items: center;
@@ -99,7 +99,7 @@ img{
 
 }
 
-/*site nav*/
+/*-site nav-*/
 .site-nav{
    display: flex;
    margin-left: 93px;
@@ -139,8 +139,6 @@ img{
 .site-nav .link:focus{
    color: var(--accent-color);
 }
-
-/*--------------------------------------*/
 .site-nav .active{
    color: var(--accent-color);
 }
@@ -158,22 +156,16 @@ img{
    background-color: var(--accent-color);
    
 }
-/*---------------------------------------------*/
-
-
-
-/*auth nav*/
+/*-auth nav-*/
 .auth-nav .link {
    display: flex;
    color: var(--primary-text-color);
    
 }
-
 .auth-nav .link:hover,
 .auth-nav .link:focus {
    color: var(--accent-color);
 }
-
 .auth-nav-icon,
 .auth-nav-phone{
    width: 16px;
@@ -198,15 +190,18 @@ img{
    fill: var(--accent-color);
 }
 
-/*hero*/
+/*-section hero-*/
 .hero{
+   max-width: 1600px;
+   margin-right: auto;
+   margin-left: auto;
    padding-top: 200px;
    padding-bottom: 200px;
    
    background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero-img.jpg');
    background-repeat: no-repeat;
-   background-position: auto;
-   background-size: 1600px;
+   background-position: center;
+   background-size: cover;
    
    text-align: center;
 }
@@ -237,7 +232,7 @@ img{
    letter-spacing: 0.06em;
 }
 
-/*section*/
+/*-section-*/
 .section{
    padding-top: 94px;
    padding-bottom: 94px;
@@ -260,7 +255,7 @@ img{
    display: none;
  }
 
-/*peculiarities*/
+/*-section peculiarities-*/
 .peculiarities-list{
    display: flex;
 }
@@ -297,12 +292,11 @@ img{
 
    margin-bottom: 30px;
 }
-/*work*/
+
+/*-section work-*/
 .work-list{
    display: flex;
-}
-.work-list .item:not(:last-child) {
-   margin-right: 30px;
+   gap: 30px;
 }
 
 .work-item{
@@ -326,7 +320,7 @@ img{
 
 
 
-/*team*/
+/*-section team-*/
 .team{
    background-color: var(--secondary-background-color);
 }
@@ -373,15 +367,16 @@ img{
 .team-social-list{
    display: flex;
    justify-content: center;
-   align-items: center;
+   gap: 10px;
 }
 .team-social-item{
    width: 44px;
    height: 44px;
 }
+/* замість цього задав gap
 .team-social-item:not(:last-child) {
    margin-right: 10px;
-}
+} */
 .team-link{
    display: flex;
    justify-content: center;
@@ -402,7 +397,7 @@ img{
 }
 
 
-/* client */
+/*-section client-*/
 .client-social-list{
    display: flex;
    justify-content: center;
@@ -435,7 +430,7 @@ img{
 }
 
 
-/*footer*/
+/*-section footer-*/
 .footer-item{
    display: flex;
    align-items: baseline;
@@ -500,14 +495,12 @@ img{
    display: flex;
    justify-content: center;
    align-items: center;
+   gap: 10px;
 }
 .footer-social-item{
    width: 44px;
    height: 44px;
  
-}
-.footer-social-item:not(:last-child) {
-   margin-right: 10px;
 }
 .footer-link{
    display: flex;
@@ -536,7 +529,7 @@ img{
 
 
 
-/*сторінка портфоліо*/
+/*-page portfolio-*/
 .list .button{
    padding: 6px 22px;
 
@@ -570,7 +563,7 @@ img{
       0px 1px 2px rgba(0, 0, 0, 0.08), 
       0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-/*projects-list*/
+/*-section projects-list-*/
 .projects-list{
    display: flex;
    flex-wrap: wrap;
@@ -620,4 +613,62 @@ img{
 
    font-size: 16px;
    line-height: 1.88;
+}
+
+
+
+/*-modal window-*/
+.backdrop{
+   position: fixed;
+   top: 0;
+   left: 0;
+
+   width: 100%;
+   height: 100%;
+
+   background-color: rgba(0, 0, 0, 0.2);
+}
+.backdrop.is-hidden{
+   opacity: 0;
+   pointer-events: none;
+}
+.modal{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+
+   min-width: 528px;
+   min-height: 581px;
+
+   background-color: #FFFFFF;
+
+
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+}
+
+
+
+.modal-button{
+   position: absolute;
+   right: 8px;
+   top: 8px;
+
+   border-radius: 50%;
+
+
+
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 30px;
+   height: 30px;
+
+   background-color: var(--background-color);
+   border: 1px solid rgba(0, 0, 0, 0.1)
+}
+.modal-close{
+   fill: #000000;
 }
